@@ -1,0 +1,33 @@
+// Write a C program to print the smallest number and its position in an array of size n
+#include <stdio.h>
+int main() {
+    int size;
+    printf("Enter the size of the array: ");
+    scanf("%d", &size);
+    int arr[size];
+    printf("Enter the elements into the array:\n");
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &arr[i]);
+    }
+    int smallest = arr[0];
+    int position = 0;
+    for (int i = 1; i < size; i++) {
+        if (arr[i] < smallest) {
+            smallest = arr[i];
+            position = i;
+        }
+    }
+    printf("Smallest number: %d\n", smallest);
+    printf("Position: %d\n", position);
+    return 0;
+}
+
+
+OUTPUT:
+Enter the size of the array: 3
+Enter the elements into the array:
+12
+1
+4
+Smallest number: 1
+Position: 1

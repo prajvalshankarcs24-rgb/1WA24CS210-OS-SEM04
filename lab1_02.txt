@@ -1,0 +1,39 @@
+// Write a C program to perform Linear search
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int target,size,count=0;
+    printf("Enter the size of the array: ");
+    scanf("%d",&size);
+    int arr[size];
+    printf("Enter the elements of the array: \n");
+    for(int i=0;i<size;i++){
+        scanf("%d",&arr[i]);
+    }
+    printf("Enter the target element: ");
+    scanf("%d",&target);
+
+    for(int i=0;i<size;i++){
+        if(arr[i]==target){
+            count++;
+        }else{
+            count;
+        }
+    }
+    if(count!=0){
+        printf("Element found");
+    }else{
+        printf("Element not found");
+    }
+    return 0;
+}
+
+
+OUTPUT:
+Enter the size of the array: 3
+Enter the elements of the array: 
+12
+1
+4
+Enter the target element: 1
+Element found
